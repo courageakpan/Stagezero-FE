@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Card</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <div data-testid="root" class="root">
+        <article data-testid="test-profile-card" class="test-profile-card">
+            <figure data-testid="test-user-avatar">
+                <img src="/Avatar/photo_2025-10-16_22-46-22.jpg" alt="User Data" />
+            </figure>
+
+            <header data-testid="test-user-name">
+                <h2><strong>Name:</strong>
+                <span>Akpan, Courage Joseph</span></h2>
+            </header>
+
+            <p> <strong>Bio:</strong> 
+                </span data-testid="test-user-bio"> My name is Courage Akpan. I love creating websites that 
+                        look good and work well on any device. I enjoy learning new 
+                        things about web design and making ideas come to life on the internet.
+                </span>                        
+            </p>
+
+            <p data-testid="test-user-time">
+                 Current time in milliseconds:
+            </p>
+
+            <nav aria-label="Social links">
+                <p><strong>Social Links:</strong></p>
+                <ul data-testid="test-user-social-links" class="social-links">
+                    <li>
+                        <a href="https://x.com/AkpanCee" target="_blank" rel="noopener noreferrer"
+                        data-testid="test-user-social-twitter" >Twitter</a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/courageakpan" target="_blank" rel="noopener noreferrer"
+                        data-testid="test-user-social-github">Github</a>
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com/in/courage-akpan" target="_blank" rel="noopener noreferrer"
+                        data-testid="test-user-social-linkedin">linkedin</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <section>
+                 <h3>Hobbies:</h3>
+                    <ul data-testid="test-user-hobbies">
+                        <li>Playing Games</li>
+                        <li>Reading</li>
+                        <li>Music</li>
+                    </ul>
+            </section>
+
+            <section>
+                <h3>Dislikes:</h3>
+                <ul data-testid="test-user-dislikes">
+                    <li>Failure</li>
+                    <li>Noise</li>
+                    <li>Competition</li>
+                </ul>
+            </section>
+        </article>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
