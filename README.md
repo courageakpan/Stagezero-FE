@@ -1,56 +1,54 @@
-#  HNG Frontend Stage 0 — Testable Profile Card
+#  HNG Frontend Stage 0 and stage 1 
 
-This project is part of the **HNG Internship (Frontend Track, Stage 0)**.  
-The goal is to build a **responsive and accessible Profile Card** using only **HTML, CSS, and Vanilla JavaScript** — with every visible element containing the required `data-testid` attributes for automated testing.
+Project: Personal Website — Profile | About | Contact
 
----
+Files:
+- index.html        → Profile page (profile card)
+- About_Me.html     → About page
+- Contact_Us.html   → Contact page (form + validation)
+- styles.css        → Main stylesheet for all pages
+- contact.js        → Contact form validation logic
+- script.js         → For time in milliseconds
+- README.md         → This file
 
-##  Task Overview
+Overview:
+A small multi-page site built with plain HTML, CSS, and JavaScript. The site includes:
+- A responsive Profile Card (index.html)
+- An About page with required sections
+- A Contact page with accessible form validation
 
-I built a small Profile Card that displays:
--  My name  
--  A short bio  
--  The current time (in milliseconds)  
--  A profile image (avatar)  
--  My social links  
--  A list of my hobbies  
--  A list of my dislikes  
+Responsive behavior:
+- Profile card (index.html):
+  - Mobile (< 700px): card stacks vertically and centers; avatar above text.
+  - Tablet (700–1023px): compact side-by-side or stacked depending on width.
+  - Desktop (≥ 1024px): wider layout with avatar left and details right (two-column look).
+- About & Contact pages:
+  - Mobile & Tablet (< 1024px): navigation on top and content stacked below.
+  - Desktop (≥ 1024px): navigation becomes a left vertical sidebar; main content on the right.
 
-Each element follows the exact naming rules (like `data-testid="test-user-name"`) so tests can find them easily.
+Contact form validation rules (client-side):
+- All fields required.
+- Email must match standard format (name@example.com).
+- Message must be at least 10 characters.
+- Error messages appear inline and are associated with inputs.
+- Success message shows only after valid submission.
 
----
+Accessibility notes:
+- Inputs have <label> elements linked with `for` attributes.
+- Error messages are placed in `<small>` elements (and should be wired to inputs with `aria-describedby` if desired).
+- Links and buttons are keyboard-focusable.
 
-##  Features
+How to run locally:
+1. Open the project folder in your code editor (VS Code recommended).
+2. Start Live Server (or open `index.html`, `About_Me.html`, or `Contact_Us.html` directly in a browser).
+3. Test responsiveness by resizing the browser or using DevTools device toolbar.
+4. Test the Contact page by submitting invalid and valid data to observe validation behavior.
 
-Semantic HTML (using `<article>`, `<figure>`, `<section>`, `<nav>`, etc.)  
-Responsive layout for mobile, tablet, and desktop  
-Accessible image with `alt` text  
-Current time updates dynamically using `Date.now()`  
-Clean, readable design built with Flexbox and media queries  
-Keyboard-friendly and fully focusable links  
-
-
-##  Project Structure
-
-frontend-stage0/
-│
-├── index.html
-├── main.css
-├── README.md
-└── script.js
-
-##  How to Run Locally
-
-1. Clone the repository:
-
-    git clone https://github.com/yourusername/hng-frontend-stage0.git
-
-
-2. Go into the project folder:
-
-    cd hng-frontend-stage0
-
-
-3. Open the file:
-    index.html
-    or simply drag and drop it into your browser.
+Folder structure example:
+project-folder/
+├─ index.html
+├─ About_Me.html
+├─ Contact_Us.html
+├─ styles.css
+├─ contact.js
+└─ script.js
